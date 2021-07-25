@@ -36,6 +36,12 @@ export default function Home() {
             <div className={styles.hero__line1}>Send and receive money</div>
             <div className={styles.hero__line2}>without thinking about it</div>
           </h1>
+          <Image
+            width="64"
+            height="64"
+            className={styles.codebtn}
+            src="/Code Button.png"
+          />
         </section>
       </main>
     </div>
