@@ -18,6 +18,9 @@ export default function Home() {
             <Image width="32" height="32" src="/Logo.png" />
           </a>
         </Link>
+        <button>
+          <Image width="32" height="32" src="/Code Button.png" />
+        </button>
         <nav className={styles.nav}>
           <ul className={styles.menu}>
             {links.map((link, index) => (
