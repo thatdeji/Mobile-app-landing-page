@@ -30,6 +30,14 @@ export default function Home() {
           </ul>
         </nav>
       </header>
+      <main className={styles.main}>
+        <section className={styles.hero}>
+          <h1 className={styles.hero__heading}>
+            <div className="line-1">Send and receive money</div>
+            <div className="line-2">without thinking about it</div>
+          </h1>
+        </section>
+      </main>
     </div>
   );
 }
