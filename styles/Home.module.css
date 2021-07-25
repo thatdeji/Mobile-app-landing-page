@@ -33,6 +33,12 @@
   font-weight: normal;
   text-align: center;
 }
+.hamburger {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
 .hero {
   padding: 0 5px;
 }
