@@ -1,9 +1,44 @@
+/*Layouts*/
 .container {
   min-height: 100vh;
   width: 100%;
 }
+.header {
+  padding: 24px 128px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/*Modules*/
+.logo {
+  width: 32px;
+  height: 32px;
+  flex: 0 0 32px;
+}
+.nav {
+  flex: 0 0 36%;
+}
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.menu__link {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
+  text-align: center;
+}
+
+/*Media queries*/
 @media screen and (min-width: 1444px) {
   .container {
     width: 1440px;
+  }
+}
+@media screen and (max-width: 999px) {
+  .nav {
+    display: none;
   }
 }
