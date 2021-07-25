@@ -62,8 +62,8 @@
   margin-top: 32px;
 }
 .phone {
-  width: 960px;
-  height: 640px;
+  width: 200px;
+  height: 300px;
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
   background-color: #f1f5ff;
@@ -73,12 +73,26 @@
   left: 0;
 }
 /*Media queries*/
+@media screen and (min-width: 320px) {
+  .phone {
+    width: 300px;
+  }
+}
 @media screen and (min-width: 360px) {
   .hero__heading {
     font-size: 2.4rem;
   }
   .header {
     padding: 24px 28px;
+  }
+  .phone {
+    width: 340px;
+    height: 340px;
+  }
+}
+@media screen and (min-width: 400px) {
+  .phone {
+    width: 390px;
   }
 }
 @media screen and (min-width: 500px) {
@@ -91,6 +105,9 @@
   .codebtn {
     margin-top: 52px;
   }
+  .phone {
+    width: 480px;
+  }
 }
 @media screen and (min-width: 700px) {
   .hero__heading {
@@ -99,10 +116,16 @@
   .header {
     padding: 24px 78px;
   }
+  .phone {
+    width: 600px;
+  }
 }
 @media screen and (min-width: 768px) {
   .hero {
     padding: 0 40px;
+  }
+  .phone {
+    width: 660px;
   }
 }
 @media screen and (min-width: 999px) {
@@ -114,6 +137,10 @@
   }
   .codebtn {
     margin-top: 72px;
+  }
+  .phone {
+    width: 760px;
+    height: 440px;
   }
 }
 @media screen and (min-width: 1444px) {
@@ -137,6 +164,10 @@
 
   .showcase {
     margin-top: 178px;
+  }
+  .phone {
+    width: 960px;
+    height: 640px;
   }
 }
 @media screen and (max-width: 998px) {
