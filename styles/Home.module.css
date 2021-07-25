@@ -92,6 +92,9 @@
   }
 }
 @media screen and (min-width: 999px) {
+  .hamburger {
+    display: none;
+  }
   .hero {
     padding: 0 100px;
   }
@@ -118,7 +121,7 @@
     margin-top: 92px;
   }
 }
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 998px) {
   .nav {
     display: none;
   }
