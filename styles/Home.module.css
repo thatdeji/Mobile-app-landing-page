@@ -9,6 +9,9 @@
   align-items: center;
   justify-content: space-between;
 }
+.main {
+  margin-top: 100px;
+}
 
 /*Modules*/
 .logo {
@@ -25,16 +28,58 @@
   justify-content: space-between;
 }
 .menu__link {
-  font-size: 16px;
+  font-size: 1.6rem;
   line-height: 24px;
   font-weight: normal;
   text-align: center;
 }
+.hero {
+  padding: 0 30px;
+}
+.hero__heading {
+  font-size: 2.2rem;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.6;
+}
+.hero__line1 {
+  padding: 0 24.5px;
+}
+.hero__line2 {
+  padding: 0 18px;
+}
 
 /*Media queries*/
+@media screen and (min-width: 500px) {
+  .hero__heading {
+    font-size: 3.2rem;
+  }
+}
+@media screen and (min-width: 700px) {
+  .hero__heading {
+    font-size: 4vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    padding: 0 40px;
+  }
+}
+@media screen and (min-width: 999px) {
+  .hero {
+    padding: 0 100px;
+  }
+}
 @media screen and (min-width: 1444px) {
   .container {
     width: 1440px;
+  }
+  .hero {
+    padding: 0 320px;
+  }
+  .hero__heading {
+    font-size: 6.4rem;
+    line-height: 96px;
   }
 }
 @media screen and (max-width: 999px) {
