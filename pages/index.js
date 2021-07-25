@@ -20,8 +20,8 @@ export default function Home() {
         </Link>
         <nav className={styles.nav}>
           <ul className={styles.menu}>
-            {links.map(link => (
-              <li className={styles.menu__item}>
+            {links.map((link, index) => (
+              <li key={index} className={styles.menu__item}>
                 <Link href="/" className={styles.menu__link}>
                   <a>{link}</a>
                 </Link>
