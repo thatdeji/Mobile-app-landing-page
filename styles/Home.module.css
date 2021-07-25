@@ -48,7 +48,9 @@
 .hero__line2 {
   padding: 0 18px;
 }
-
+.codebtn {
+  text-align: center;
+}
 /*Media queries*/
 @media screen and (min-width: 360px) {
   .hero__heading {
