@@ -50,6 +50,7 @@
 }
 .codebtn {
   text-align: center;
+  margin-top: 32px;
 }
 /*Media queries*/
 @media screen and (min-width: 360px) {
@@ -66,6 +67,9 @@
   }
   .header {
     padding: 24px 48px;
+  }
+  .codebtn {
+    margin-top: 52px;
   }
 }
 @media screen and (min-width: 700px) {
@@ -85,6 +89,9 @@
   .hero {
     padding: 0 100px;
   }
+  .codebtn {
+    margin-top: 72px;
+  }
 }
 @media screen and (min-width: 1444px) {
   .container {
@@ -100,6 +107,9 @@
   .hero__heading {
     font-size: 6.4rem;
     line-height: 96px;
+  }
+  .codebtn {
+    margin-top: 92px;
   }
 }
 @media screen and (max-width: 999px) {
