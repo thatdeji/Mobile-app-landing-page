@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import { links } from "../data/data";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -19,11 +20,13 @@ export default function Home() {
         </Link>
         <nav className={styles.nav}>
           <ul className={styles.menu}>
-            <li className={styles.menu__item}>
-              <Link href="/" className={styles.menu__link}>
-                <a>Products</a>
-              </Link>
-            </li>
+            {links.map(link => (
+              <li className={styles.menu__item}>
+                <Link href="/" className={styles.menu__link}>
+                  <a>{link}</a>
+                </Link>
+              </li>
+            ))}
           </ul>
         </nav>
       </header>
