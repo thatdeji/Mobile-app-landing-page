@@ -43,6 +43,9 @@ export default function Home() {
             <Image width="64" height="64" src="/Code Button.png" />
           </div>
         </section>
+        <section className={styles.showcase}>
+          <div className={styles.phone} />
+        </section>
       </main>
     </div>
   );
