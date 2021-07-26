@@ -19,8 +19,16 @@ const phoneVariants = {
   }
 };
 const textVariants = {
-  initial: { y: "50px" },
-  animate: { y: 0, transition: { duration: 0.8, delay: 0.7 } }
+  initial: { y: "70px" },
+  animate: { y: 0, transition: { duration: 0.8, delay: 0.8 } }
+};
+const scannerVariants = {
+  initial: { y: 0, x: "-50%" },
+  animate: { y: "-48px", transition: { duration: 0.8, delay: 1 } }
+};
+const qrVariants = {
+  initial: { y: "49px", x: "-50%" },
+  animate: { y: "7.5px", transition: { duration: 0.8, delay: 1 } }
 };
 
 export default function Home() {
@@ -72,7 +80,23 @@ export default function Home() {
             </div>
           </h1>
           <div className={styles.codebtn}>
-            <Image width="64" height="64" src="/Code Button.png" />
+            {/*<Image width="64" height="64" src="/Code Button.png" />*/}
+            <div className={styles.box}>
+              <motion.img
+                variants={scannerVariants}
+                className={styles.scanner}
+                width="48"
+                height="48"
+                src="/Scanner 1.svg"
+              />
+              <motion.img
+                variants={qrVariants}
+                className={styles.qr}
+                width="54"
+                height="49"
+                src="/QR code 1.svg"
+              />
+            </div>
           </div>
         </section>
         <section className={styles.showcase}>

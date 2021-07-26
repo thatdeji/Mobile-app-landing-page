@@ -75,6 +75,26 @@
   text-align: center;
   margin-top: 32px;
 }
+.box {
+  width: 64px;
+  height: 64px;
+  border-radius: 24px;
+  background-color: #2ac940;
+  display: inline-block;
+  position: relative;
+}
+.box img {
+  position: absolute;
+  left: 50%;
+}
+.qr {
+  top: 0;
+  transform: translate(-50%, 49px);
+}
+.scanner {
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
 .phone {
   width: 200px;
   height: 300px;
