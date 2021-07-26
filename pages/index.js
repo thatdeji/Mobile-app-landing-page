@@ -82,6 +82,15 @@ export default function Home() {
               </li>
             ))}
           </ul>
+          <ul className={styles.menumobile}>
+            {links.map((link, index) => (
+              <li key={index} className={styles.menumobile__item}>
+                <Link href="/" className={styles.menumobile__link}>
+                  <a>{link}</a>
+                </Link>
+              </li>
+            ))}
+          </ul>
         </nav>
       </header>
       <main className={styles.main}>

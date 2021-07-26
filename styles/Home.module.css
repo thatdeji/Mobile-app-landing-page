@@ -33,6 +33,9 @@
   align-items: center;
   justify-content: space-between;
 }
+.menumobile {
+  display: none;
+}
 .menu a {
   font-size: 1.6rem;
   line-height: 24px;
@@ -217,6 +220,29 @@
 }
 @media screen and (max-width: 998px) {
   .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    min-height: 100vh;
+    width: 100%;
+    z-index: 1000;
+  }
+  .menu {
     display: none;
+  }
+  .menumobile {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  .menumobile li {
+    overflow: hidden;
+  }
+  .menumobile a {
+    font-size: calc(3vw + 10px);
   }
 }
