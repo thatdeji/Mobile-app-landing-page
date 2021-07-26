@@ -22,17 +22,29 @@ const textVariants = {
   initial: { y: "70px" },
   animate: { y: 0, transition: { duration: 0.8, delay: 0.8 } }
 };
+const transitionQR = { duration: 0.8, delay: 1 };
 const boxVariants = {
   initial: { backgroundColor: "#2ac940", scale: 1 },
   animate: {
     backgroundColor: "#fff",
     scale: 1.6,
-    transition: { duration: 0.8, delay: 1 }
+    transition: transitionQR
+  }
+};
+const boxVariants2 = {
+  initial: { backgroundColor: "#fff" },
+  animate: {
+    backgroundColor: "#2ac940",
+    transition: transitionQR
   }
 };
 const boxAnimVariants = {
   initial: { y: 0, x: "-50%" },
-  animate: { y: "-54px", transition: { duration: 0.8, delay: 1 } }
+  animate: { y: "-54px", transition: transitionQR }
+};
+const boxAnimVariants2 = {
+  initial: { y: 0, x: "-50%" },
+  animate: { y: "-32px", transition: transitionQR }
 };
 
 export default function Home() {
@@ -55,7 +67,22 @@ export default function Home() {
           </a>
         </Link>
         <button className={styles.hamburger}>
-          <Image width="32" height="32" src="/Code Button.png" />
+          <motion.div variants={boxVariants2} className={styles.box2}>
+            <motion.div className={styles.boxAnim} variants={boxAnimVariants2}>
+              <motion.img
+                className={styles.scanner}
+                width="20"
+                height="20"
+                src="/Scanner 1.svg"
+              />
+              <motion.img
+                className={styles.qr}
+                width="30"
+                height="30"
+                src="/QR code 1.svg"
+              />
+            </motion.div>
+          </motion.div>
         </button>
         <nav className={styles.nav}>
           <ul className={styles.menu}>
@@ -84,7 +111,6 @@ export default function Home() {
             </div>
           </h1>
           <div className={styles.codebtn}>
-            {/*<Image width="64" height="64" src="/Code Button.png" />*/}
             <motion.div variants={boxVariants} className={styles.box}>
               <motion.div className={styles.boxAnim} variants={boxAnimVariants}>
                 <motion.img

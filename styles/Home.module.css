@@ -84,7 +84,14 @@
   position: relative;
   overflow: hidden;
 }
-.box img {
+.box2 {
+  width: 32px;
+  height: 32px;
+  border-radius: 12px;
+  background-color: #fff;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
 }
 .boxAnim {
   position: absolute;
