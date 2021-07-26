@@ -82,18 +82,24 @@
   background-color: #2ac940;
   display: inline-block;
   position: relative;
+  overflow: hidden;
 }
 .box img {
+}
+.boxAnim {
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 8px;
   left: 50%;
+  transform: translate(-50%, -50%);
 }
 .qr {
-  top: 0;
-  transform: translate(-50%, 49px);
+  padding-top: 10px;
 }
 .scanner {
-  top: 50%;
-  transform: translate(-50%, -50%);
+  /*top: 50%;*/
 }
 .phone {
   width: 200px;
