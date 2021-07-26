@@ -22,7 +22,7 @@ const textVariants = {
   initial: { y: "70px" },
   animate: { y: 0, transition: { duration: 0.8, delay: 0.8 } }
 };
-const transitionQR = { duration: 0.8, delay: 1 };
+const transitionQR = { duration: 0.8, ease: [0.6, 0.01, -0.05, 0.95] };
 const transitionMenu = { duration: 0.6, ease: [0.6, 0.01, -0.05, 0.95] };
 const boxVariants2 = {
   close: { backgroundColor: "#2ac940" },
@@ -47,17 +47,7 @@ const menuVariants = {
   },
   open: {
     opacity: 1,
-    transition: { duration: 1, ease: [0.6, 0.01, -0.05, 0.95] }
-  }
-};
-const linkVariants = {
-  close: {
-    y: "30px",
-    transition: { duration: 0.6, ease: [0.6, 0.01, -0.05, 0.95] }
-  },
-  open: {
-    y: 0,
-    transition: { duration: 1, ease: [0.6, 0.01, -0.05, 0.95] }
+    transition: transitionMenu
   }
 };
 
@@ -158,7 +148,7 @@ export default function Home() {
               whileHover={{
                 backgroundColor: "#fff",
                 scale: 1.6,
-                transition: { duration: 0.8, ease: [0.6, 0.01, -0.05, 0.95] }
+                transition: transitionQR
               }}
               className={styles.box}
             >
@@ -167,7 +157,7 @@ export default function Home() {
                 whileHover={{
                   y: "-54px",
                   x: "-50%",
-                  transition: { duration: 0.8, ease: [0.6, 0.01, -0.05, 0.95] }
+                  transition: transitionQR
                 }}
                 className={styles.boxAnim}
               >
