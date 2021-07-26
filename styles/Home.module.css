@@ -83,6 +83,7 @@
   display: inline-block;
   position: relative;
   overflow: hidden;
+  cursor: pointer;
 }
 .box2 {
   width: 32px;
@@ -104,9 +105,6 @@
 }
 .qr {
   padding-top: 10px;
-}
-.scanner {
-  /*top: 50%;*/
 }
 .phone {
   width: 200px;

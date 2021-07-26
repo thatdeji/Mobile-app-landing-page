@@ -23,24 +23,12 @@ const textVariants = {
   animate: { y: 0, transition: { duration: 0.8, delay: 0.8 } }
 };
 const transitionQR = { duration: 0.8, delay: 1 };
-const boxVariants = {
-  initial: { backgroundColor: "#2ac940", scale: 1 },
-  animate: {
-    backgroundColor: "#fff",
-    scale: 1.6,
-    transition: transitionQR
-  }
-};
 const boxVariants2 = {
   initial: { backgroundColor: "#fff" },
   animate: {
     backgroundColor: "#2ac940",
     transition: transitionQR
   }
-};
-const boxAnimVariants = {
-  initial: { y: 0, x: "-50%" },
-  animate: { y: "-54px", transition: transitionQR }
 };
 const boxAnimVariants2 = {
   initial: { y: 0, x: "-50%" },
@@ -111,8 +99,23 @@ export default function Home() {
             </div>
           </h1>
           <div className={styles.codebtn}>
-            <motion.div variants={boxVariants} className={styles.box}>
-              <motion.div className={styles.boxAnim} variants={boxAnimVariants}>
+            <motion.div
+              whileHover={{
+                backgroundColor: "#fff",
+                scale: 1.6,
+                transition: { duration: 0.8, ease: [0.6, 0.01, -0.05, 0.95] }
+              }}
+              className={styles.box}
+            >
+              <motion.div
+                initial={{ x: "-50%" }}
+                whileHover={{
+                  y: "-54px",
+                  x: "-50%",
+                  transition: { duration: 0.8, ease: [0.6, 0.01, -0.05, 0.95] }
+                }}
+                className={styles.boxAnim}
+              >
                 <motion.img
                   className={styles.scanner}
                   width="48"
