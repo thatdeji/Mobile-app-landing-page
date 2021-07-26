@@ -30,6 +30,12 @@
   align-items: center;
   justify-content: space-between;
 }
+.menu a {
+  font-size: 1.6rem;
+  line-height: 24px;
+  font-weight: normal;
+  text-align: center;
+}
 .menu__link {
   font-size: 1.6rem;
   line-height: 24px;
