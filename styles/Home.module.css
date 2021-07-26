@@ -53,6 +53,8 @@
   border: none;
   outline: none;
   cursor: pointer;
+  position: relative;
+  z-index: 10001;
 }
 .hero {
   padding: 0 5px;
@@ -97,14 +99,20 @@
   position: relative;
   overflow: hidden;
 }
-.boxAnim {
+.boxAnim,
+.boxAnim2 {
   position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
-  top: 8px;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.boxAnim {
+  top: 8px;
+}
+.boxAnim2 {
+  top: 6px;
 }
 .qr {
   padding-top: 10px;
@@ -223,7 +231,6 @@
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #000;
     min-height: 100vh;
     width: 100%;
     z-index: 1000;
@@ -238,6 +245,9 @@
     flex-direction: column;
     min-height: 100vh;
     padding: 20px;
+    background-color: #000;
+    /*transform: translateY(-100vh);*/
+    opacity: 0;
   }
   .menumobile li {
     overflow: hidden;

@@ -2,7 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { links } from "../data/data";
-import { motion } from "framer-motion";
+import { motion, useCycle } from "framer-motion";
 import styles from "../styles/Home.module.css";
 
 //Animations
@@ -23,19 +23,47 @@ const textVariants = {
   animate: { y: 0, transition: { duration: 0.8, delay: 0.8 } }
 };
 const transitionQR = { duration: 0.8, delay: 1 };
+const transitionMenu = { duration: 0.6, ease: [0.6, 0.01, -0.05, 0.95] };
 const boxVariants2 = {
-  initial: { backgroundColor: "#fff" },
-  animate: {
-    backgroundColor: "#2ac940",
-    transition: transitionQR
+  close: { backgroundColor: "#2ac940" },
+  open: {
+    backgroundColor: "#fff",
+    transition: transitionMenu
   }
 };
 const boxAnimVariants2 = {
-  initial: { y: 0, x: "-50%" },
-  animate: { y: "-32px", transition: transitionQR }
+  initial: { x: "-50%" },
+  close: {
+    y: 0,
+    x: "-50%",
+    transition: transitionMenu
+  },
+  open: { y: "-30px", x: "-50%", transition: transitionMenu }
+};
+const menuVariants = {
+  close: {
+    opacity: 0,
+    transition: transitionMenu
+  },
+  open: {
+    opacity: 1,
+    transition: { duration: 1, ease: [0.6, 0.01, -0.05, 0.95] }
+  }
+};
+const linkVariants = {
+  close: {
+    y: "30px",
+    transition: { duration: 0.6, ease: [0.6, 0.01, -0.05, 0.95] }
+  },
+  open: {
+    y: 0,
+    transition: { duration: 1, ease: [0.6, 0.01, -0.05, 0.95] }
+  }
 };
 
 export default function Home() {
+  const [menuAnimation, cycleMenuAnimation] = useCycle("close", "open");
+  const [boxAnimation, cycleBoxAnimation] = useCycle("close", "open");
   return (
     <motion.div
       variants={containerVariants}
@@ -54,9 +82,23 @@ export default function Home() {
             <Image width="32" height="32" src="/Logo.png" />
           </a>
         </Link>
-        <button className={styles.hamburger}>
-          <motion.div variants={boxVariants2} className={styles.box2}>
-            <motion.div className={styles.boxAnim} variants={boxAnimVariants2}>
+        <button
+          className={styles.hamburger}
+          onClick={() => {
+            cycleMenuAnimation();
+            cycleBoxAnimation();
+          }}
+        >
+          <motion.div
+            variants={boxVariants2}
+            animate={boxAnimation}
+            className={styles.box2}
+          >
+            <motion.div
+              className={styles.boxAnim2}
+              animate={boxAnimation}
+              variants={boxAnimVariants2}
+            >
               <motion.img
                 className={styles.scanner}
                 width="20"
@@ -82,7 +124,11 @@ export default function Home() {
               </li>
             ))}
           </ul>
-          <ul className={styles.menumobile}>
+          <motion.ul
+            variants={menuVariants}
+            animate={menuAnimation}
+            className={styles.menumobile}
+          >
             {links.map((link, index) => (
               <li key={index} className={styles.menumobile__item}>
                 <Link href="/" className={styles.menumobile__link}>
@@ -90,7 +136,7 @@ export default function Home() {
                 </Link>
               </li>
             ))}
-          </ul>
+          </motion.ul>
         </nav>
       </header>
       <main className={styles.main}>
