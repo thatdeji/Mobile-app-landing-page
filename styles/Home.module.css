@@ -15,6 +15,9 @@
 .showcase {
   margin-top: 50px;
 }
+.showcase:-webkit-scrollbar {
+  display: none;
+}
 
 /*Modules*/
 .logo {
@@ -57,11 +60,16 @@
   text-align: center;
   line-height: 1.6;
 }
+.hero__heading span {
+  display: inline-block;
+}
 .hero__line1 {
   padding: 0 24.5px;
+  overflow: hidden;
 }
 .hero__line2 {
   padding: 0 18px;
+  overflow: hidden;
 }
 .codebtn {
   text-align: center;
