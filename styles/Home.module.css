@@ -2,6 +2,7 @@
 .container {
   min-height: 100vh;
   width: 100%;
+  overflow: hidden;
 }
 .header {
   padding: 24px 10px;
@@ -14,9 +15,6 @@
 }
 .showcase {
   margin-top: 50px;
-}
-.showcase:-webkit-scrollbar {
-  display: none;
 }
 
 /*Modules*/
